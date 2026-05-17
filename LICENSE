@@ -1,0 +1,53 @@
+# Licence
+
+Le dépôt `epsi-admin-bdd` est publié sous une double licence selon la nature du contenu.
+
+## Supports pédagogiques — Creative Commons BY-SA 4.0
+
+Les supports pédagogiques (documents Markdown, plans de séance, énoncés, contrat
+de services, fil rouge, supports de cours) sont publiés sous licence
+**Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International
+(CC BY-SA 4.0)**.
+
+Vous êtes libre de :
+- partager — copier, distribuer et communiquer le matériel par tous moyens
+- adapter — remixer, transformer et créer à partir du matériel
+pour toute utilisation, y compris commerciale.
+
+Selon les conditions suivantes :
+- Attribution — vous devez créditer NTIConseil, indiquer si des modifications
+  ont été effectuées, et fournir un lien vers la licence.
+- Partage dans les Mêmes Conditions — si vous transformez ou créez à partir du
+  matériel, vous devez diffuser vos contributions sous la même licence.
+
+Texte complet : https://creativecommons.org/licenses/by-sa/4.0/deed.fr
+
+## Scripts et code — Licence MIT
+
+Les scripts SQL, fichiers de configuration, scripts d'initialisation
+d'environnement et tout autre code source sont publiés sous **licence MIT**.
+
+Copyright (c) 2025-2026 NTIConseil
+
+L'autorisation est accordée, gracieusement, à toute personne obtenant une copie
+de ce logiciel et des fichiers de documentation associés (le « Logiciel »), de
+commercialiser le Logiciel sans restriction, notamment les droits d'utiliser,
+de copier, de modifier, de fusionner, de publier, de distribuer, de sous-licencier
+et/ou de vendre des copies du Logiciel, ainsi que d'autoriser les personnes
+auxquelles le Logiciel est fourni à le faire, sous réserve des conditions
+suivantes :
+
+La déclaration de copyright ci-dessus et la présente autorisation doivent être
+incluses dans toutes les copies ou parties substantielles du Logiciel.
+
+LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPLICITE OU
+IMPLICITE.
+
+---
+
+## Note sur le schéma NanoOrbit
+
+Le schéma de base de données NanoOrbit utilisé comme fil rouge est dérivé d'un
+projet pédagogique du module ALTN83 (cycle ingénieur). Son usage dans ce dépôt
+est strictement pédagogique. Toute réutilisation doit conserver cette mention
+d'origine.
