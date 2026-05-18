@@ -153,11 +153,11 @@ Le découpage du syllabus est mis en œuvre sur 7 séances dans ce module. Le ta
 | Partie du syllabus | Séance(s) | Modalité | Compétence dominante |
 |---|---|---|---|
 | Partie I — Survol | Séance 1 | FFP | Cadre du module |
-| Partie 2 — Administration / disponibilité | Séances 2 et 3 | Classe virtuelle + FOAD | ASRBD1.6 / ASRBD1.8 |
-| Partie 3 — Stratégie sauvegarde/restauration | Séance 4 | Classe virtuelle | ASRBD1.6 |
-| Partie 4 — Cas pratique n°1 | Séance 5 | FOAD | ASRBD1.6 |
-| Partie 5 — Supervision | Séance 6 | FOAD | ASRBD1.7 |
-| Partie 6 — Cas pratique n°2 | Séance 7 | FOAD | Synthèse + évaluation formative |
+| Partie 2 — Administration / disponibilité | Séances 2 et 3 | FFP | ASRBD1.6 / ASRBD1.8 |
+| Partie 3 — Stratégie sauvegarde/restauration | Séance 4 |FFP | ASRBD1.6 |
+| Partie 4 — Cas pratique n°1 | Séance 5 | FFP | ASRBD1.6 |
+| Partie 5 — Supervision | Séance 6 | FFP | ASRBD1.7 |
+| Partie 6 — Cas pratique n°2 | Séance 7 | FFP | Synthèse + évaluation formative |
 
 ---
 
