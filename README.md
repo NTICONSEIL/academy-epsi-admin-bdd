@@ -22,9 +22,7 @@ L'évaluation est une **mise en situation professionnelle reconstituée** intég
 
 | Modalité | Volume |
 |---|---|
-| Face-à-face présentiel (FFP) | 2 h |
-| Classe virtuelle | 4 h |
-| FOAD — autoformation | 8 h |
+| Face-à-face présentiel (FFP) | 14 h |
 | **Total** | **14 h** |
 
 ## 🛰️ Le fil rouge NanoOrbit
@@ -58,7 +56,6 @@ epsi-admin-bdd/
 │   ├── objectifs-et-contenu.md        Table des matières pédagogique (syllabus)
 │   ├── contrat-de-services.md         Engagements NanoOrbit — référence des décisions techniques
 │   ├── fil-rouge.md                   Scénario progressif en 6 étapes
-│   └── competences-rncp.md            Mapping ASRBD1.6/1.7/1.8 → séances → livrables
 ├── 01-environnement/                  Environnement Oracle reproductible
 │   └── README.md
 ├── 02-seances/                        Plans d'animation et supports apprenants
@@ -81,12 +78,12 @@ epsi-admin-bdd/
 | # | Modalité | Titre | Partie syllabus | Compétence |
 |---|---|---|---|---|
 | 1 | FFP (2 h) | Cadrage et fil rouge NanoOrbit | Partie I | Cadre |
-| 2 | Classe virtuelle (2 h) | Plan d'administration et outils Oracle | Partie 2 | ASRBD1.6 |
-| 3 | FOAD (2 h) | Organisation et optimisation du stockage | Partie 2 | ASRBD1.8 |
-| 4 | Classe virtuelle (2 h) | Stratégie de sauvegarde et PRA | Partie 3 | ASRBD1.6 |
-| 5 | FOAD (2 h) | Cas pratique n°1 — sauvegarde/restauration | Partie 4 | ASRBD1.6 |
-| 6 | FOAD (2 h) | Supervision proactive et monitoring | Partie 5 | ASRBD1.7 |
-| 7 | FOAD (2 h) | Cas pratique n°2 et évaluation formative | Partie 6 | Synthèse |
+| 2 | FFP (2 h) | Plan d'administration et outils Oracle | Partie 2 | ASRBD1.6 |
+| 3 | FFP (2 h) | Organisation et optimisation du stockage | Partie 2 | ASRBD1.8 |
+| 4 | FFP (2 h) | Stratégie de sauvegarde et PRA | Partie 3 | ASRBD1.6 |
+| 5 | FFP (2 h) | Cas pratique n°1 — sauvegarde/restauration | Partie 4 | ASRBD1.6 |
+| 6 | FFP (2 h) | Supervision proactive et monitoring | Partie 5 | ASRBD1.7 |
+| 7 | FFP (2 h) | Cas pratique n°2 et évaluation formative | Partie 6 | Synthèse |
 
 ## 🚀 Démarrage
 
