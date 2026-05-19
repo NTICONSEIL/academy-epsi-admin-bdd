@@ -1,0 +1,48 @@
+# =============================================================================
+# NANOORBIT — ENVIRONNEMENT ORACLE 23ai
+# Module BDOE633 — Administration et Optimisation des Bases de Données
+# =============================================================================
+# Demarre une instance Oracle Database 23ai Free contenant la base NanoOrbit.
+#
+# Utilisation :
+#   docker compose up -d        Demarre l'instance (init automatique au 1er run)
+#   docker compose logs -f      Suit l'initialisation
+#   docker compose down         Arrete l'instance (CONSERVE les donnees)
+#   docker compose down -v      Arrete et SUPPRIME les donnees (reinitialisation)
+#
+# INITIALISATION : le script setup/01-run-init.sh est execute UNE SEULE FOIS,
+# a la creation de la base. Aux redemarrages suivants, la base persiste dans le
+# volume « nanoorbit-data » et n'est PAS reinitialisee — le travail realise par
+# les apprenants en FOAD est donc conserve d'une seance a l'autre.
+#
+# Connexion une fois l'instance prete :
+#   Hote      : localhost      Port : 1521
+#   Service   : FREEPDB1
+#   Schema    : NANOORBIT_ADMIN / NanoOrbit_2026
+#   SYSTEM    : system / NanoOrbit_Sys2026
+#   OEM Express : https://localhost:5500/em
+# =============================================================================
+
+services:
+  oracle:
+    image: container-registry.oracle.com/database/free:latest
+    container_name: nanoorbit-oracle
+    ports:
+      - "1521:1521"          # ecoute SQL*Net
+      - "5500:5500"          # Oracle Enterprise Manager Express
+    environment:
+      ORACLE_PWD: NanoOrbit_Sys2026          # mot de passe SYS / SYSTEM
+      ORACLE_CHARACTERSET: AL32UTF8          # UTF-8 : indispensable (donnees accentuees)
+      NLS_LANG: .AL32UTF8
+    volumes:
+      # Persistance des donnees Oracle entre les redemarrages
+      - nanoorbit-data:/opt/oracle/oradata
+      # Scripts d'initialisation : executes UNE SEULE FOIS apres creation de la base
+      - ./setup:/opt/oracle/scripts/setup
+      # Scripts SQL et orchestrateur, accessibles depuis le conteneur
+      - ./:/nanoorbit
+    restart: unless-stopped
+
+volumes:
+  nanoorbit-data:
+    name: nanoorbit-data

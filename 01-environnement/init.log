@@ -1,0 +1,417 @@
+============================================================
+  INITIALISATION DE LA BASE NANOORBIT
+============================================================
+[1/6] Creation du schema NANOORBIT_ADMIN...
+============================================================
+NanoOrbit — Creation du schema NANOORBIT_ADMIN
+============================================================
+Schema NANOORBIT_ADMIN existant supprime.
+
+PL/SQL procedure successfully completed.
+
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+============================================================
+Schema NANOORBIT_ADMIN cree.
+Connexion : NANOORBIT_ADMIN / NanoOrbit_2026 @ FREEPDB1
+Etape suivante : 01-ddl-tables.sql
+============================================================
+[2/6] Creation des 11 tables...
+============================================================
+NanoOrbit — Creation du schema (11 tables)
+============================================================
+> Creation ORBITE...
+
+Table created.
+
+> Creation SATELLITE...
+
+Table created.
+
+> Creation HISTORIQUE_STATUT...
+
+Table created.
+
+> Creation INSTRUMENT...
+
+Table created.
+
+> Creation EMBARQUEMENT...
+
+Table created.
+
+> Creation CENTRE_CONTROLE...
+
+Table created.
+
+> Creation STATION_SOL...
+
+Table created.
+
+> Creation AFFECTATION_STATION...
+
+Table created.
+
+> Creation MISSION...
+
+Table created.
+
+> Creation FENETRE_COM...
+
+Table created.
+
+> Creation PARTICIPATION...
+
+Table created.
+
+
+============================================================
+Schema NanoOrbit cree : 11 tables.
+Etape suivante : 02-dml-donnees.sql
+============================================================
+[3/6] Chargement du jeu de donnees (43 lignes)...
+============================================================
+NanoOrbit — Chargement du jeu de donnees de reference
+============================================================
+> Insertion ORBITE...
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+-> 3 orbites (ORB id 1 SSO 550km, id 2 SSO 700km, id 3 LEO 400km)
+> Insertion SATELLITE...
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+-> 5 satellites (3 Operationnels, 1 En veille, 1 Desorbite)
+> Insertion INSTRUMENT...
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+-> 4 instruments (CAM, IR, AIS [resolution NULL], Spectrometre)
+> Insertion EMBARQUEMENT...
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+-> 7 embarquements (5 Nominal, 1 Degrade, 1 Hors service)
+> Insertion CENTRE_CONTROLE...
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+-> 3 centres (id 1 Paris, id 2 Houston, id 3 Singapour)
+> Insertion STATION_SOL...
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+-> 3 stations (GS-TLS-01 Active, GS-KIR-01 Active, GS-SGP-01 Maintenance)
+> Insertion AFFECTATION_STATION...
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+-> 3 affectations (Paris: TLS+KIR, Singapour: SGP ; Houston sans station)
+> Insertion MISSION...
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+-> 3 missions (MSN-ARC-2023 Active, MSN-DEF-2022 Terminee, MSN-COAST-2024 Active)
+> Insertion FENETRE_COM...
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+-> 5 fenetres (3 Realisees avec volume, 2 Planifiees volume NULL)
+> Insertion PARTICIPATION...
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+-> 7 participations
+
+Commit complete.
+
+
+============================================================
+Chargement termine (43 lignes) — COMMIT effectue.
+Etape suivante : 03-triggers.sql
+============================================================
+[4/6] Creation des 5 triggers metier...
+============================================================
+NanoOrbit — Creation des 5 triggers metier
+============================================================
+> Creation T1 - trg_valider_fenetre...
+
+Trigger created.
+
+No errors.
+> Creation T2 - trg_no_chevauchement...
+
+Trigger created.
+
+No errors.
+> Creation T3 - trg_volume_realise...
+
+Trigger created.
+
+No errors.
+> Creation T4 - trg_mission_terminee...
+
+Trigger created.
+
+No errors.
+> Creation T5 - trg_historique_statut...
+
+Trigger created.
+
+No errors.
+
+============================================================
+5 triggers metier crees.
+Etape suivante : 04-package.sql
+============================================================
+[5/6] Creation du package pkg_nanoOrbit...
+============================================================
+NanoOrbit — Creation du package pkg_nanoOrbit
+============================================================
+> Creation de la SPEC...
+
+Package created.
+
+No errors.
+> Creation du BODY...
+
+Package body created.
+
+No errors.
+
+============================================================
+Package pkg_nanoOrbit cree (SPEC + BODY).
+Initialisation du schema NanoOrbit terminee.
+============================================================
+[6/6] Verification de l'environnement...
+
+============================================================
+VERIFICATION DE L'ENVIRONNEMENT NANOORBIT
+============================================================
+
+--- Utilisateur connecte -- SELECT USER AS utilisateur_courant FROM DUAL
+
+--- Objets du schema (attendu : 11 tables, 5 triggers, 2 packages) -- SELECT object_type, COUNT(*) AS nombre
+SP2-0734: unknown command beginning "FROM   use..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "WHERE  obj..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "GROUP  BY ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "ORDER  BY ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+Help: https://docs.oracle.com/error-help/db/sp2-0044/
+
+--- Objets invalides (attendu : aucun) -- SELECT object_name, object_type, status
+SP2-0734: unknown command beginning "FROM   use..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "WHERE  sta..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+
+--- Volumetrie par table (attendu : 43 lignes au total) -- SELECT 'ORBITE'		AS table_nom, COUNT(*) AS nb_lignes FROM ORBITE
+SP2-0734: unknown command beginning "UNION ALL ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "UNION ALL ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "UNION ALL ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "UNION ALL ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+Help: https://docs.oracle.com/error-help/db/sp2-0044/
+SP2-0734: unknown command beginning "UNION ALL ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "UNION ALL ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "UNION ALL ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "UNION ALL ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+Help: https://docs.oracle.com/error-help/db/sp2-0044/
+SP2-0734: unknown command beginning "UNION ALL ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "UNION ALL ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SP2-0734: unknown command beginning "ORDER BY t..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+
+--- Repartition des satellites par statut -- SELECT statut, COUNT(*) AS nb FROM SATELLITE GROUP BY statut ORDER BY statut
+
+--- Repartition des fenetres de communication par statut -- SELECT statut, COUNT(*) AS nb FROM FENETRE_COM GROUP BY statut ORDER BY statut
+
+--- Test du package pkg_nanoOrbit -- SET SERVEROUTPUT ON
+statut_constellation : 3/5 satellites opérationnels, 2 missions actives
+
+PL/SQL procedure successfully completed.
+
+
+============================================================
+BILAN DE VERIFICATION
+------------------------------------------------------------
+Tables		   : 11   (attendu : 11)
+Triggers	   : 5	 (attendu : 5)
+Package SPEC+BODY  : 2	 (attendu : 2)
+Lignes (10 tables) : 43  (attendu : 43)
+Objets invalides   : 0	 (attendu : 0)
+------------------------------------------------------------
+RESULTAT : environnement NanoOrbit CONFORME.
+============================================================
+
+PL/SQL procedure successfully completed.
+
+============================================================
+  INITIALISATION NANOORBIT TERMINEE
+  Connexion : NANOORBIT_ADMIN / NanoOrbit_2026 @ FREEPDB1
+============================================================
