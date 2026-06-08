@@ -120,18 +120,4 @@
 
 ---
 
-## ✅ Barème de correction (sur 20)
-
-| Critère | Points |
-|---|---|
-| Section 2 — Classification correcte des 3 familles avec toutes les tables | 3 |
-| Section 3 — Engagements chiffrés exacts (RPO/RTO/dispo par famille) | 4 |
-| Section 4 — Éléments à surveiller reliés aux engagements | 3 |
-| Section 5 — Fenêtres de maintenance cohérentes (≤ 30 min opérationnel, cycle 90 min respecté) | 4 |
-| Section 6 — 4 KPI minimum, reliés aux engagements | 2 |
-| Section 8 + 9 — Cartographie réelle + point d'attention sur le stockage non segmenté | 4 |
-| **Total** | **20** |
-
----
-
 *Corrigé L1-A — Séance 2 — Module BDOE633 — Usage instructeur uniquement*
