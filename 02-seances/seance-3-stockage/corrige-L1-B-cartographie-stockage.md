@@ -177,22 +177,6 @@ Les index les plus prioritaires, à créer en séance 6 :
 4. `IDX_PARTICIPATION_SAT` — `PARTICIPATION(id_satellite)` — jointure fréquente
 5. `IDX_HISTORIQUE_SAT` — `HISTORIQUE_STATUT(id_satellite)` — croissance continue, requêtes d'audit
 
----
-
-## ✅ Barème de correction (sur 20)
-
-| Critère | Points |
-|---|---|
-| Partie 1 — Tableau état initial complet et correct (toutes tables, tablespace USERS, taille) | 4 |
-| Partie 1 — Constat formulé : absence de ségrégation, impossible de sauvegarder par famille | 2 |
-| Partie 2 — Association correcte des 10 tables existantes aux 3 tablespaces | 2 |
-| Partie 2 — Justification de chaque tablespace reliée au contrat (RPO/RTO/disponibilité) | 5 |
-| Partie 3 — Création de `HISTORIQUE_STATUT` dans `TBS_HISTORIQUE` justifiée | 2 |
-| Partie 4 — Au moins 5 candidats identifiés avec profil (filtre ou jointure) | 3 |
-| Présentation et lisibilité du document | 2 |
-| **Total** | **20** |
-
-> **Point clé à valoriser** : un apprenant qui justifie `TBS_OPERATION` par le RPO de 15 min a compris le lien entre organisation du stockage et stratégie de sauvegarde — c'est l'objectif central de la séance.
 
 ---
 
