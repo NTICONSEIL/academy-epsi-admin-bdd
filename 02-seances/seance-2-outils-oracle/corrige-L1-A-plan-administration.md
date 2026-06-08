@@ -116,7 +116,6 @@
 - **Aucun index sur les colonnes de recherche** : colonnes `statut` (SATELLITE), `code_station` (FENETRE_COM), `id_mission` (PARTICIPATION) non indexées. Les requêtes opérationnelles feront des full-scans en production. → À planifier.
 - **`HISTORIQUE_STATUT` sans stratégie de purge** : la table grossit indéfiniment. Sans politique de rétention, elle saturera le tablespace à terme.
 
-> **Remarque correcteur** : 3 points minimum attendus. Le premier (stockage non segmenté) est incontournable — c'est la transition vers la séance 3. Valoriser les apprenants qui ont identifié le mode NOARCHIVELOG sans qu'on le leur ait dit explicitement.
 
 ---
 
