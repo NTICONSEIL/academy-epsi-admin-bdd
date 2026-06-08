@@ -239,13 +239,6 @@ NanoOrbit dispose d'une base administrée selon les règles de l'art : disponibl
 | 4 | fonctionne à l'aveugle | supervisée proactivement | L4-A, L4-B |
 | 5 | est administrée au quotidien | auditée et améliorée | L5-A, L5-B |
 
-## 🔑 Pour l'intervenant — points de cohérence
-
-- **Toujours rattacher une décision technique au contrat de services.** C'est ce qui distingue l'exercice technique de la posture d'administrateur.
-- **Faire constater l'état de la base en début de chaque séance FOAD** : « voici où nous en étions, voici ce que nous allons faire ». Le fil rouge ne fonctionne que s'il est rendu explicite.
-- **Sauvegarde du travail apprenant entre les séances** : indispensable pour que le fil rouge avance réellement. Voir `01-environnement/`.
-- **Le dossier d'exploitation se construit en continu** : ne pas le présenter comme un livrable de dernière minute en séance 7, mais comme un classeur qui s'enrichit à chaque étape.
-
 ---
 
 *Document maître — Module BDOE633 — Branche `academy`*
