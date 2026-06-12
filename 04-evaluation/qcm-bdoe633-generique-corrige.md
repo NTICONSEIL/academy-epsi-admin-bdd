@@ -1,5 +1,5 @@
 # QCM — Notions transversales d'administration de bases de données Oracle
-## Version générique — 20 questions — Corrigé instructeur
+## Version générique — 20 questions — Corrigé 
 
 **Module** : BDOE633 · Administration et Optimisation des Bases de Données  
 **Objectif** : valider les notions générales transférables à toute base Oracle de production (indépendamment du cas NanoOrbit)  
